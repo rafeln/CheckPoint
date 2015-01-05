@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    
+    <!-- Border -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_height"
+        android:background="@color/bg_green" />
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/screen_title"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical"
+	    android:background="@color/bg_gray_header">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balance"
+            android:textColor="@color/text_gray"
+            android:layout_marginLeft="@dimen/margin_default"
+	        android:layout_marginRight="@dimen/margin_text" />
+	
+        <TextView
+            android:id="@+id/listViewFooterTextViewBalanceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hour"
+            android:textColor="@color/text_green"
+            android:layout_marginRight="@dimen/margin_default" />
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+        
+	    
+        <!-- Alarm and exit Time -->
+        <LinearLayout
+            android:id="@+id/listViewFooterLinearLayoutAlarm"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:gravity="center_vertical"
+		    android:clickable="true"
+		    android:onClick="showAlarmPopup"
+		    android:layout_marginRight="@dimen/margin_default"
+		    android:background="@drawable/selector_listview_footer" >
+        
+	        <ImageView
+	            android:id="@+id/listViewFooterImageViewAlarm"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" 
+	            android:contentDescription="@string/alarm"
+	            android:src="@drawable/selector_alarm" />
+	
+	        <TextView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/text_gray"
+	            android:layout_marginLeft="@dimen/margin_text"
+	            android:text="@string/exit_time" />
+	        
+	        <TextView
+	            android:id="@+id/listViewFooterTextViewTimeToGo"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="@dimen/margin_text"
+	            android:text="@string/hour"
+	            android:textColor="@color/text_green" />
+	    </LinearLayout>
+        
+	</LinearLayout>
+</LinearLayout>

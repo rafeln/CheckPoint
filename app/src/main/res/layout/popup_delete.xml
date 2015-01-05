@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_popup"
+    android:gravity="center">
+    
+    <!-- Content -->
+    <LinearLayout
+	    android:layout_width="@dimen/popup_width"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@color/white"
+	    android:padding="@dimen/popup_intern_padding">
+	    
+        <!-- Title -->
+        <TextView
+            android:id="@+id/popupDeleteTextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popup_title_height"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:background="@color/bg_green"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_text"
+            android:layout_marginBottom="@dimen/popup_intern_padding" />
+        
+        <LinearLayout
+            android:orientation="vertical"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	android:background="@color/bg_gray_content"
+	        android:layout_marginBottom="@dimen/popup_intern_padding">
+	        <TextView
+	            android:id="@+id/popupDeleteTextViewCheckPointTime"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/hour"
+	            android:textColor="@color/text_green"
+	            android:background="@color/bg_gray_content"
+	            android:layout_marginLeft="@dimen/margin_default"
+            	android:layout_marginTop="@dimen/margin_default"  />
+        
+        <TextView
+            android:id="@+id/popupDeleteTextViewMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_checkpoint"
+            android:textColor="@color/text_gray"
+            android:background="@color/bg_gray_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginBottom="@dimen/margin_default" />
+        
+        </LinearLayout>
+        
+        <LinearLayout 
+            android:orientation="horizontal"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center">
+	        
+	        <Button
+	            android:id="@+id/popupDeleteButtonCancel"
+	            android:layout_width="@dimen/popup_button_width"
+	            android:layout_height="@dimen/popup_button_height"
+	            android:text="@string/cancel"
+	            android:textColor="@color/white"
+	            android:background="@drawable/selector_green_button"
+	            android:layout_marginRight="@dimen/margin_text" />
+	        
+	        <Button
+	            android:id="@+id/popupDeleteButtonOk"
+	            android:layout_width="@dimen/popup_button_width"
+	            android:layout_height="@dimen/popup_button_height"
+	            android:text="@string/ok"
+	            android:textColor="@color/white"
+	            android:background="@drawable/selector_green_button" />
+	        
+        </LinearLayout>
+
+	</LinearLayout>
+</LinearLayout>

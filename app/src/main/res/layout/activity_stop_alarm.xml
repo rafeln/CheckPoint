@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/transparent">
+    
+	<LinearLayout
+	    android:id="@+id/stopAlarmLinearLayoutCancel"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@drawable/bg_alarm_stop"
+	    android:padding="@dimen/margin_default"
+    	android:clickable="true" >
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/notification_time_to_go"
+		    android:textColor="@color/text_green"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:drawableLeft="@drawable/ic_launcher_checkpoint"
+		    android:drawablePadding="@dimen/margin_text"
+		    android:gravity="center_vertical" />
+	
+	</LinearLayout>
+</LinearLayout>

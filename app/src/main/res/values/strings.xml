@@ -1,0 +1,77 @@
+<resources>
+
+    <string name="about">Sobre</string>
+    <string name="alarm">Alarme</string>
+    <string name="alarm_turn_on">Manter alarme ativo?</string>
+    <string name="app_name">Checkpoint</string>
+    <string name="app_description">O seu gerenciador de tempo de atividades</string>
+    <string name="back">Voltar</string>
+    <string name="balance">Saldo:</string>
+    <string name="cancel">Cancelar</string>
+    <string name="category">Categoria</string>
+    <string name="checkpoint_empty">CheckPoint vazio</string>
+    <string name="choose_option">Escolha opção</string>
+    <string name="comment">Comentário</string>
+    <string name="comment_not_found">Não foram encontradas ocorrências de</string>
+    <string name="configuration">Configurações</string>
+    <string name="date">Segunda, 07/01/2013</string>
+    <string name="date_choose">Ir para a data</string>
+    <string name="date_error">A data inicial é maior do que a data final\nFaça um novo relatório</string>
+    <string name="day">Segunda</string>
+    <string name="default_total_per_day">Carga horária padrão</string>
+    <string name="default_total_per_day_zero">A Carga horária padrão não pode ser 0</string>
+    <string name="define_default_total_per_day">Carga horária</string>
+    <string name="define_geolocation_turning">Geolocalização</string>
+    <string name="define_sincronization_turning">Sicronização</string>
+    <string name="delete">Deletar CheckPoint</string>
+    <string name="delete_checkpoint">Tem certeza que deseja deletar este CheckPoint?\n(Entrada e Saída)</string>
+    <string name="design">Design</string>
+    <string name="designer_name">Criativassa</string>
+    <string name="developer">Desenvolvedor</string>
+    <string name="developer_name">Rafael Nunes</string>
+    <string name="edit_comment">Editar comentário</string>
+    <string name="edit_entry_time">Editar entrada</string>
+    <string name="edit_exit_time">Editar saída</string>
+    <string name="entry_time">Horário de entrada:</string>
+    <string name="exit_time">Horário de saída:</string>
+    <string name="fill_comment">Preencha o comentário</string>
+    <string name="find">Procurar</string>
+    <string name="find_comment">Procurar comentário</string>
+    <string name="geolocation">Geolocalização</string>
+    <string name="google_play">Avalie no Google Play</string>
+    <string name="insert_comment">Inserir comentário</string>
+    <string name="insert_entry_first">Insira primeiro a entrada</string>
+    <string name="hifen">-</string>
+    <string name="hour">00:00</string>
+    <string name="new_relatory">Novo Relatório</string>
+    <string name="new_relatory_hint">Para gerar um novo\nrelatório pressione o botão +</string>
+    <string name="notification_time_to_go">Hora de ir!</string>
+    <string name="notification_remind_exit_time">Você esqueceu de marca a saída!</string>
+    <string name="off">Inativo</string>
+    <string name="ok">OK</string>
+    <string name="on">Ativo</string>
+    <string name="parentheses_open">(</string>
+    <string name="parentheses_close">)</string>
+    <string name="period">Período</string>
+    <string name="relatory">Relatório</string>
+    <string name="relatory_empty">Não há Checkpoints neste período</string>
+    <string name="relatory_end">Fim do relatório</string>
+    <string name="relatory_init">Início do relatório</string>
+    <string name="remove_from_listview">Remover desta lista</string>
+    <string name="remove_from_listview_confirmation">Tem certeza que deseja remover este Checkpoint desta lista?</string>
+    <string name="soon">Em breve</string>
+    
+    <string name="time_error_entry_gt_exit">Hora de entrada é maior do que a hora de saída</string>
+    <string name="time_error_entry_lt_last_exit">Hora de entrada é menor do que a hora da saída do CheckPoint anterior</string>
+    <string name="time_error_exit_gt_post_entry">Hora de saída é maior do que a hora de entrada do próximo CheckPoint</string>
+    
+    <string name="tomorrow">Amanhã</string>
+    <string name="total">Total:</string>
+    <string name="total_day">Total do dia</string>
+    <string name="turn_off">Desativar</string>
+    <string name="turn_on">Ativar</string>
+    <string name="type_comment">Digite o comentário</string>
+    <string name="version">v 1.0</string>
+    <string name="yesterday">Ontem</string>
+    
+</resources>

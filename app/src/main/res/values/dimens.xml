@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="border_finer_height">1dp</dimen>
+    <dimen name="border_height">2dp</dimen>
+    <dimen name="buttons_green_padding">10dp</dimen>
+    <dimen name="checkpoint_height">55dp</dimen>
+    <dimen name="day_of_week_width">60dp</dimen>
+    <dimen name="date_text_width">160dp</dimen>
+    <dimen name="margin_default">10dp</dimen>
+    <dimen name="margin_row_group">40dp</dimen>
+    <dimen name="margin_text">5dp</dimen>
+    <dimen name="popup_comment_margin_top">-30dp</dimen>
+    <dimen name="popup_button_height">40dp</dimen>
+    <dimen name="popup_button_width">140dp</dimen>
+    <dimen name="popup_intern_padding">3dp</dimen>
+    <dimen name="popup_title_height">35dp</dimen>
+    <dimen name="popup_width">280dp</dimen>
+    <dimen name="row_height">48dp</dimen>
+    <dimen name="screen_title">40dp</dimen>
+    
+</resources>

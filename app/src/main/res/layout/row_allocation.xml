@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    
+    <LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="@dimen/border_finer_height" >
+	    <!-- Entry Time -->
+	    <LinearLayout
+	        android:id="@+id/rowAllocationLinearLayoutEntryTime"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/row_height"
+	        android:gravity="center_vertical"
+	    	android:background="@drawable/selector_listview_child"
+	    	android:layout_marginBottom="@dimen/border_finer_height" >
+	        
+	        <ImageButton
+	            android:id="@+id/rowAllocationImageButtonEntryTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="@dimen/margin_default"
+	            android:layout_marginRight="@dimen/margin_default"
+	            android:contentDescription="@string/entry_time"
+	            android:background="@drawable/ic_triangle_gray_right" />
+	
+	        <TextView
+	            android:id="@+id/rowAllocationTextViewEntryTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/text_gray"
+	            android:text="@string/hour" />
+	    </LinearLayout>
+	    
+	    <!-- Exit Time -->
+	    <LinearLayout
+	        android:id="@+id/rowAllocationLinearLayoutExitTime"
+	        android:orientation="horizontal"
+	        android:layout_width="match_parent"
+	        android:layout_height="@dimen/row_height"
+	        android:gravity="center_vertical"
+	        android:background="@drawable/selector_listview_child"
+	        android:layout_marginBottom="@dimen/border_height" >
+	        
+	        <ImageButton
+	            android:id="@+id/rowAllocationImageButtonExitTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="@dimen/margin_default"
+	            android:layout_marginRight="@dimen/margin_default"
+	            android:contentDescription="@string/exit_time"
+	            android:background="@drawable/ic_triangle_gray_left" />
+	
+	        <TextView
+	            android:id="@+id/rowAllocationTextViewExitTime"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:textColor="@color/text_gray"
+	            android:text="@string/hour" />
+	    </LinearLayout>
+	    
+	</LinearLayout>
+	 
+    <!-- Comment, Category and Delete -->
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <ImageButton
+            android:id="@+id/rowAllocationImageButtonComment"
+            android:contentDescription="@string/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default"
+            android:background="@drawable/selector_comment_empty" />
+        
+        <ImageView
+            android:id="@+id/rowAllocationImageViewCategory"
+            android:contentDescription="@string/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default"
+            android:src="@drawable/selector_category"
+            android:visibility="gone" />
+        
+	    <ImageButton
+	        android:id="@+id/rowAllocationImageButtonDelete"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/selector_delete"
+	        android:contentDescription="@string/delete" />
+        
+    </LinearLayout>
+</FrameLayout>

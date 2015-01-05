@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <!-- Superior Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/checkpoint_height"
+        android:background="@color/bg_green" >
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/back"
+            android:background="@drawable/selector_back"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:onClick="back" />
+        
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/checkpoint_title" />
+         
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@string/new_relatory"
+            android:background="@drawable/selector_plus"
+            android:layout_marginRight="@dimen/margin_text"
+            android:onClick="showPopups" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/screen_title"
+        android:gravity="center"
+        android:text="@string/relatory"
+        android:textColor="@color/text_gray_header"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <!-- Border -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_height"
+        android:layout_marginBottom="@dimen/border_height"
+        android:background="@color/bg_green" />
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        
+	    <ExpandableListView
+	        android:id="@+id/relatoryExpandableListView"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:divider="@color/white" />
+
+	    <TextView
+	        android:id="@+id/relatoryTextViewNewRelatoryHint"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+	        android:text="@string/new_relatory_hint"
+	        android:textColor="@color/text_green" />
+    
+    </RelativeLayout>
+    
+</LinearLayout>

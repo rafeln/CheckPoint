@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <!-- Superior Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/checkpoint_height"
+        android:background="@color/bg_green" >
+        
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back"
+            android:background="@drawable/selector_back"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:onClick="back" />
+        
+         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/checkpoint_title" />
+    </RelativeLayout>
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+         <LinearLayout 
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+        	 android:layout_height="wrap_content">
+        
+
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/screen_title"
+		        android:gravity="center"
+		        android:text="@string/about"
+		        android:textColor="@color/text_gray_header"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		    
+		    <!-- Border -->
+		    <LinearLayout
+		        android:orientation="vertical"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/border_height"
+		        android:layout_marginBottom="@dimen/border_height"
+		        android:background="@color/bg_green" />
+		
+		    <!-- App Informations -->
+		    <ImageView
+		        android:contentDescription="@string/app_name"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/checkpoint_green"
+		        android:layout_gravity="center_horizontal" />
+		    
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/app_description"
+		        android:textColor="@color/text_green" />
+		    
+		    <TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/version"
+		        android:textColor="@color/text_gray"
+		        android:layout_marginBottom="@dimen/margin_default" />
+		    
+		    <!-- Developer Informations -->
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/row_height"
+		        android:gravity="center_vertical"
+		        android:background="@drawable/selector_listview_child"
+		        android:layout_marginLeft="@dimen/margin_default"
+		        android:layout_marginRight="@dimen/margin_default"
+		        android:layout_marginBottom="@dimen/border_height"
+		        android:paddingLeft="@dimen/margin_default"
+		        android:clickable="true"
+		        android:onClick="goToDeveloperWebPage" >
+		        
+			    <ImageView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/ic_triangle_gray_right"
+			        android:contentDescription="@string/developer"
+			        android:layout_marginLeft="@dimen/margin_default"
+		        	android:layout_marginRight="@dimen/margin_default" />
+		
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/developer"
+			        android:textColor="@color/text_gray_header"
+			        android:layout_marginLeft="@dimen/margin_text" />
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/developer_name"
+			        android:textColor="@color/text_green"
+			        android:layout_marginLeft="@dimen/margin_default" />
+		        
+		    </LinearLayout>
+		    
+		    <!-- Designer Informations -->
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/row_height"
+		        android:gravity="center_vertical"
+		        android:background="@drawable/selector_listview_child"
+		        android:layout_marginLeft="@dimen/margin_default"
+		        android:layout_marginRight="@dimen/margin_default"
+		        android:layout_marginBottom="@dimen/border_height"
+		        android:paddingLeft="@dimen/margin_default"
+		        android:clickable="true"
+		        android:onClick="goToDesignerWebPage" >
+		        
+			    <ImageView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/ic_triangle_gray_right"
+			        android:contentDescription="@string/design"
+			        android:layout_marginLeft="@dimen/margin_default"
+		        	android:layout_marginRight="@dimen/margin_default" />
+		
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/design"
+			        android:textColor="@color/text_gray_header"
+			        android:layout_marginLeft="@dimen/margin_text" />
+			    
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/designer_name"
+			        android:textColor="@color/text_green"
+			        android:layout_marginLeft="@dimen/margin_default" />
+		        
+		    </LinearLayout>
+		    
+		    <!-- Rate -->
+		    <LinearLayout
+		        android:orientation="horizontal"
+		        android:layout_width="match_parent"
+		        android:layout_height="@dimen/row_height"
+		        android:gravity="center_vertical"
+		        android:background="@drawable/selector_listview_child"
+		        android:layout_marginLeft="@dimen/margin_default"
+		        android:layout_marginRight="@dimen/margin_default"
+		        android:layout_marginBottom="@dimen/border_height"
+		        android:paddingLeft="@dimen/margin_default"
+		        android:clickable="true"
+		        android:onClick="goToGooglePlayAppWebPage" >
+		        
+			    <ImageView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:src="@drawable/ic_triangle_gray_right"
+			        android:contentDescription="@string/google_play"
+			        android:layout_marginLeft="@dimen/margin_default"
+		        	android:layout_marginRight="@dimen/margin_default" />
+		
+			    <TextView
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="@string/google_play"
+			        android:textColor="@color/text_gray_header"
+			        android:layout_marginLeft="@dimen/margin_text" />
+		        
+		    </LinearLayout>
+    
+    	</LinearLayout>
+    </ScrollView>
+    
+</LinearLayout>

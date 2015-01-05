@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- days of week -->
+    <string-array name="days_of_week_array">
+	    <item>Domingo</item> <!-- sunday -->
+	    <item>Segunda</item> <!-- monday -->
+	    <item>Terça</item>   <!-- tuesday -->
+	    <item>Quarta</item>  <!-- wednesday -->
+	    <item>Quinta</item>  <!-- thursday -->
+	    <item>Sexta</item>   <!-- friday -->
+	    <item>Sábado</item>  <!-- saturday -->
+	</string-array>
+    
+    <!-- months -->
+    <string-array name="months_array">
+	    <item>Janeiro</item>   <!-- january -->
+	    <item>Fevereiro</item> <!-- february -->
+	    <item>Março</item>     <!-- march -->
+	    <item>Abril</item>     <!-- april -->
+	    <item>Maio</item>      <!-- may -->
+	    <item>Junho</item>     <!-- june -->
+	    <item>Julho</item>     <!-- july -->
+	    <item>Agosto</item>    <!-- august -->
+	    <item>Setembro</item>  <!-- september -->
+	    <item>Outubro</item>   <!-- october -->
+	    <item>Novembro</item>  <!-- november -->
+	    <item>Dezembro</item>  <!-- december -->
+	</string-array>
+    
+</resources>

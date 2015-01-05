@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_listview_child">
+    
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/row_height"
+	    android:orientation="horizontal"
+	    android:gravity="center_vertical">
+	    
+	    <TextView
+	        android:id="@+id/rowRelatoryChildTextViewEntryTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_default"
+	        android:layout_marginRight="@dimen/margin_text"
+	        android:text="@string/hour"
+	        android:textColor="@color/text_green" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="@dimen/margin_text"
+	        android:text="@string/hifen"
+	        android:textColor="@color/text_gray" />
+	    
+	    <TextView
+	        android:id="@+id/rowRelatoryChildTextViewExitTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="@dimen/margin_default"
+	        android:text="@string/hour"
+	        android:textColor="@color/text_green" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/parentheses_open"
+	        android:textColor="@color/text_gray_header" />
+	    
+	    <TextView
+	        android:id="@+id/rowRelatoryChildTextViewDifference"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/hour"
+	        android:textColor="@color/text_gray" />
+	    
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/parentheses_close"
+	        android:textColor="@color/text_gray_header" />
+	    
+	    <TextView
+	        android:id="@+id/rowRelatoryChildTextViewComment"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/margin_default"
+	        android:layout_marginRight="@dimen/margin_default"
+	        android:text="@string/comment"
+	        android:textColor="@color/text_gray_header" />
+	        
+	</LinearLayout>
+	
+	<!-- Border -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border_height"
+        android:background="@color/white" />
+</LinearLayout>

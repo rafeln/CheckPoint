@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_popup"
+    android:gravity="center">
+    
+    <!-- Content -->
+    <LinearLayout
+	    android:layout_width="@dimen/popup_width"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:background="@color/white"
+	    android:padding="@dimen/popup_intern_padding">
+	    
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/popup_title_height"
+            android:text="@string/choose_option"
+            android:textColor="@color/white"
+            android:background="@color/bg_green"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/popup_intern_padding" />
+        
+        <TextView
+            android:id="@+id/popupOptionsTextViewEditEntryTime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            android:text="@string/edit_entry_time"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/selector_listview_child"
+            android:layout_marginBottom="@dimen/border_height" />
+        
+        <TextView
+            android:id="@+id/popupOptionsTextViewEditExitTime"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            android:text="@string/edit_exit_time"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/selector_listview_child"
+            android:layout_marginBottom="@dimen/border_height" />
+        
+        <TextView
+            android:id="@+id/popupOptionsTextViewEditComment"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            android:text="@string/edit_comment"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/selector_listview_child"
+            android:layout_marginBottom="@dimen/border_height" />
+        
+        <TextView
+            android:id="@+id/popupOptionsTextViewDelete"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            android:text="@string/delete"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/selector_listview_child"
+            android:layout_marginBottom="@dimen/border_height" />
+        
+        <TextView
+            android:id="@+id/popupOptionsTextViewRemoveFromListView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/row_height"
+            android:gravity="center"
+            android:text="@string/remove_from_listview"
+            android:textColor="@color/text_gray"
+            android:background="@drawable/selector_listview_child"
+            android:layout_marginBottom="@dimen/border_height" />
+        
+        <Button
+            android:id="@+id/popupOptionsButtonCancel"
+            android:layout_width="@dimen/popup_button_width"
+            android:layout_height="@dimen/popup_button_height"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:background="@drawable/selector_green_button" />
+        
+	</LinearLayout>
+</LinearLayout>

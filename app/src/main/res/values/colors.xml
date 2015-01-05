@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_gray_header">#ECECFB</color>
+    <color name="bg_gray_header_on">#CCCCFF</color>
+    <color name="bg_gray_content">#F5F5F5</color>
+    <color name="bg_gray_content_on">#EBEBEB</color>
+    <color name="bg_green">#79C143</color>
+    <color name="bg_green_button">#B7DE9A</color>
+    <color name="bg_green_on">#599230</color>
+    <color name="bg_popup">#66999999</color> <!-- #AARRGGBB -->
+    <color name="text_gray">#9897A5</color>
+    <color name="text_gray_header">#666666</color>
+    <color name="text_green">#79C143</color>
+    <color name="text_red">#FF1100</color>
+    <color name="white">#FFFFFF</color>
+</resources>

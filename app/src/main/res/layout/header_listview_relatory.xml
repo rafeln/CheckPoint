@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white" >
+    
+    <!-- Period -->
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:gravity="center_vertical"
+	    android:layout_marginBottom="@dimen/border_height">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:text="@string/period"
+            android:textColor="@color/text_gray_header" />
+
+        <TextView
+            android:id="@+id/listViewHeaderTextViewInitDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_text"
+            android:text="@string/hour"
+            android:textColor="@color/text_green" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_text"
+            android:text="@string/hifen"
+            android:textColor="@color/text_gray" />
+        
+        <TextView
+            android:id="@+id/listViewHeaderTextViewEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default"
+            android:text="@string/hour"
+            android:textColor="@color/text_green" />
+        
+    </LinearLayout>
+    
+    <!-- Total -->
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:gravity="center_vertical"
+        android:background="@color/bg_gray_content"
+	    android:layout_marginBottom="@dimen/border_height">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:text="@string/total"
+            android:textColor="@color/text_gray_header" />
+        
+        <TextView
+            android:id="@+id/listViewHeaderTextViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default"
+            android:text="@string/hour"
+            android:textColor="@color/text_green" />
+        
+    </LinearLayout>
+    
+    <!-- Category -->
+    <LinearLayout 
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/row_height"
+        android:gravity="center_vertical"
+        android:background="@color/bg_gray_content"
+	    android:layout_marginBottom="@dimen/border_height"
+	    android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/margin_text"
+            android:text="@string/category"
+            android:textColor="@color/text_gray_header" />
+        
+        <TextView
+            android:id="@+id/listViewHeaderTextViewCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_default"
+            android:text="@string/category"
+            android:textColor="@color/text_green" />
+        
+    </LinearLayout>
+</LinearLayout>
