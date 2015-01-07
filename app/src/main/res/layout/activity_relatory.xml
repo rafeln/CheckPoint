@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -59,6 +60,18 @@
     <RelativeLayout 
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/btn_export"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/export"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            fab:fab_colorNormal="@color/bg_green_on"
+            fab:fab_colorPressed="@color/bg_green"
+            fab:fab_colorRipple="@color/bg_green_button" />
         
 	    <ExpandableListView
 	        android:id="@+id/relatoryExpandableListView"
@@ -74,7 +87,7 @@
             android:layout_centerHorizontal="true"
 	        android:text="@string/new_relatory_hint"
 	        android:textColor="@color/text_green" />
-    
+
     </RelativeLayout>
-    
+
 </LinearLayout>

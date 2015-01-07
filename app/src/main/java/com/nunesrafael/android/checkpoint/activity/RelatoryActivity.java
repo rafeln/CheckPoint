@@ -1,9 +1,5 @@
 package com.nunesrafael.android.checkpoint.activity;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -16,6 +12,8 @@ import android.widget.DatePicker;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.melnykov.fab.FloatingActionButton;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.adapter.AllocationExpandableAdapter;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
@@ -23,11 +21,22 @@ import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.util.CountingTime;
+import com.nunesrafael.android.checkpoint.util.GenXls;
 import com.nunesrafael.android.checkpoint.util.Util;
+
+import org.joda.time.Interval;
+import org.joda.time.Period;
+
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class RelatoryActivity extends Activity {
 
 	public int RESOURCE_ID_HEADER = R.layout.header_listview_relatory;
+
+    private static final SimpleDateFormat HOUR_FORMAT = new SimpleDateFormat("HH:mm");
 	
 	private ExpandableListView expandableListView;
 	private AllocationExpandableAdapter allocationExpandableAdapter;
@@ -50,6 +59,38 @@ public class RelatoryActivity extends Activity {
         
         expandableListView = (ExpandableListView)findViewById(R.id.relatoryExpandableListView);
         addHeader();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btn_export);
+        fab.attachToListView(expandableListView);
+        fab.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ArrayList<Object[]> dataReport = new ArrayList<>();
+
+                for (ArrayList<Allocation> allocArr : allocations) {
+                    for (Allocation alloc : allocArr) {
+
+                        boolean exitTimeIsNull = alloc.getExitTime() == null;
+
+                        Period period = null;
+
+                        if (!exitTimeIsNull) {
+                            period = new Interval(alloc.getEntryTime().getTime(), alloc.getExitTime().getTime()).toPeriod();
+                        }
+
+                        dataReport.add(new Object[] {
+                                alloc.getEntryTime(),
+                                HOUR_FORMAT.format(alloc.getEntryTime()),
+                                exitTimeIsNull ? "" : HOUR_FORMAT.format(alloc.getExitTime()),
+                                exitTimeIsNull ? "" : period.getHours() + ":" + period.getMinutes()
+                        });
+                    }
+                }
+
+                GenXls.export(RelatoryActivity.this, new String[]{"Data", "Entrada", "Saída", "Total"}, dataReport);
+            }
+        });
         
         textViewNewRelatoryHint = (TextView)findViewById(R.id.relatoryTextViewNewRelatoryHint);
         
