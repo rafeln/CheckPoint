@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.nunesrafael.android.checkpoint"
-        minSdkVersion 8
+        minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -21,5 +21,8 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:appcompat-v7:21.+'
+    compile 'com.melnykov:floatingactionbutton:1.+'
+    compile 'net.danlew:android.joda:2.+'
+    compile files('libs/poi-3.11-20141221.jar')
 }
