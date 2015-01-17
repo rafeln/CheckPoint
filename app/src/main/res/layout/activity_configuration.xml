@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -11,14 +12,15 @@
         android:layout_height="@dimen/checkpoint_height"
         android:background="@color/bg_green" >
         
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:contentDescription="@string/back"
             android:background="@drawable/selector_back"
             android:layout_marginLeft="@dimen/margin_text"
-            android:onClick="backToHome" />
+            android:onClick="backToHome"
+            custom:fontNameImageButtonPlus="roboto" />
         
          <ImageView
             android:layout_width="wrap_content"
@@ -29,13 +31,14 @@
             android:src="@drawable/checkpoint_title" />
     </RelativeLayout>
 
-    <TextView
+    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
         android:layout_width="match_parent"
         android:layout_height="@dimen/screen_title"
         android:gravity="center"
         android:text="@string/configuration"
         android:textColor="@color/text_gray_header"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        custom:fontNameTextViewPlus="roboto" />
     
     <!-- Border -->
     <LinearLayout
@@ -73,20 +76,22 @@
 			        android:src="@drawable/ic_stopwatch"
 			        android:contentDescription="@string/total" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/define_default_total_per_day"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:id="@+id/configurationTextViewDefaulTotalPerDay"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/hour"
 			        android:textColor="@color/text_green"
-			        android:layout_marginLeft="@dimen/margin_default" />
+			        android:layout_marginLeft="@dimen/margin_default"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
 		    
@@ -107,20 +112,22 @@
 			        android:src="@drawable/ic_category_filled"
 			        android:contentDescription="@string/category" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/category"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:id="@+id/configurationTextViewDefaultCategory"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/soon"
 			        android:textColor="@color/text_green"
-			        android:layout_marginLeft="@dimen/margin_default" />
+			        android:layout_marginLeft="@dimen/margin_default"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
 		    
@@ -142,12 +149,13 @@
 			        android:src="@drawable/ic_comment_find"
 			        android:contentDescription="@string/comment" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/find_comment"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
 		    </LinearLayout>
 		    
@@ -169,20 +177,22 @@
 			        android:src="@drawable/ic_alarm_off"
 			        android:contentDescription="@string/alarm" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/alarm"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:id="@+id/configurationTextViewAlarmTurning"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/off"
 			        android:textColor="@color/text_green"
-			        android:layout_marginLeft="7dp" /> <!-- Exception for 2.7" -->
+			        android:layout_marginLeft="7dp"
+                    custom:fontNameTextViewPlus="roboto" /> <!-- Exception for 2.7" -->
 		        
 		    </LinearLayout>
 		    
@@ -204,12 +214,13 @@
 			        android:src="@drawable/ic_relatory"
 			        android:contentDescription="@string/relatory" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/relatory"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
 		    
@@ -230,20 +241,22 @@
 			        android:src="@drawable/ic_pin"
 			        android:contentDescription="@string/geolocation" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/define_geolocation_turning"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:id="@+id/configurationTextViewGeolocationTurning"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/soon"
 			        android:textColor="@color/text_green"
-			        android:layout_marginLeft="@dimen/margin_default" />
+			        android:layout_marginLeft="@dimen/margin_default"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
 		    
@@ -264,20 +277,22 @@
 			        android:src="@drawable/ic_sincronize"
 			        android:contentDescription="@string/define_sincronization_turning" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/define_sincronization_turning"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 			    
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:id="@+id/configurationTextViewSicronizationTurning"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/soon"
 			        android:textColor="@color/text_green"
-			        android:layout_marginLeft="@dimen/margin_default" />
+			        android:layout_marginLeft="@dimen/margin_default"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
 		    
@@ -299,12 +314,13 @@
 			        android:src="@drawable/ic_information"
 			        android:contentDescription="@string/about" />
 		
-			    <TextView
+			    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:text="@string/about"
 			        android:textColor="@color/text_gray_header"
-			        android:layout_marginLeft="@dimen/margin_text" />
+			        android:layout_marginLeft="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 		        
 		    </LinearLayout>
     

@@ -2,7 +2,6 @@ package com.nunesrafael.android.checkpoint.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -11,7 +10,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import com.nunesrafael.android.checkpoint.R;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.preference.Preference;
 
@@ -31,10 +29,6 @@ public class ConfigurationActivity extends Activity {
         
         textViewAlarmTurning = (TextView)findViewById(R.id.configurationTextViewAlarmTurning);
         setTextViewAlarmTurningText(Preference.getAlarmState(this));
-        
-        // Changing the font
-      	Typeface typeFace = Typeface.createFromAsset(getAssets(), Font.FONT_RESOURCE_PATH);
-      	Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
 	}
 	
 	public void backToHome(View view) {
@@ -82,7 +76,7 @@ public class ConfigurationActivity extends Activity {
 	}
 	
 	public void setTextViewAlarmTurningText(boolean alarmState) {
-		if(alarmState == true)
+		if(alarmState)
         	textViewAlarmTurning.setText(getString(R.string.on));
         else
         	textViewAlarmTurning.setText(getString(R.string.off));

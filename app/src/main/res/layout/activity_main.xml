@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -19,7 +20,7 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/checkpoint_title" />
 
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -27,7 +28,8 @@
             android:background="@drawable/selector_configuration"
             android:contentDescription="@string/configuration"
             android:layout_marginRight="@dimen/margin_text"
-            android:onClick="goToConfiguration" />
+            android:onClick="goToConfiguration"
+            custom:fontNameImageButtonPlus="roboto" />
     </RelativeLayout>
     
     <!-- Date and Total -->
@@ -37,15 +39,16 @@
         android:layout_height="@dimen/screen_title"
         android:gravity="center_vertical" >
         
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/margin_text"
             android:contentDescription="@string/yesterday"
             android:background="@drawable/selector_yesterday"
-            android:onClick="goToYesterday" />
+            android:onClick="goToYesterday"
+            custom:fontNameImageButtonPlus="roboto" />
 
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/mainTextViewShowingDate"
             android:layout_width="@dimen/date_text_width"
             android:layout_height="wrap_content"
@@ -53,34 +56,39 @@
             android:text="@string/date"
             android:gravity="center"
             android:clickable="true"
-            android:onClick="showDatePopup" />
+            android:onClick="showDatePopup"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/tomorrow"
             android:background="@drawable/selector_tomorrow"
-            android:onClick="goToTomorrow" />
+            android:onClick="goToTomorrow"
+            custom:fontNameImageButtonPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_text"
             android:textColor="@color/text_gray"
-            android:text="@string/total" />
+            android:text="@string/total"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/mainTextViewTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_default"
             android:textColor="@color/text_green"
-            android:text="@string/hour" />
+            android:text="@string/hour"
+            custom:fontNameTextViewPlus="roboto" />
         
     </LinearLayout>
     

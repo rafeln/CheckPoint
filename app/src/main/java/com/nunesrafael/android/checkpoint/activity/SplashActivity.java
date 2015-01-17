@@ -2,12 +2,11 @@ package com.nunesrafael.android.checkpoint.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.view.KeyEvent;
 import com.nunesrafael.android.checkpoint.R;
-import com.nunesrafael.android.checkpoint.font.Font;
 
 public class SplashActivity extends Activity {
 	
@@ -18,11 +17,7 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         
         setContentView(R.layout.activity_splash);
-        
-        // Changing the font
-     	Typeface typeFace = Typeface.createFromAsset(getAssets(),Font.FONT_RESOURCE_PATH);
-     	Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
-        
+
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
         	
@@ -31,7 +26,7 @@ public class SplashActivity extends Activity {
             	
                 finish();
                 
-                if(isBackButtonPressed == false) {
+                if(!isBackButtonPressed) {
                 	
                 	Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                 	startActivity(intent);
@@ -41,7 +36,7 @@ public class SplashActivity extends Activity {
     }
 	
 	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent keyEvent) {
+	public boolean onKeyDown(int keyCode,@NonNull KeyEvent keyEvent) {
 		
 		if (keyCode == KeyEvent.KEYCODE_BACK)
 			isBackButtonPressed = true;

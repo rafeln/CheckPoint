@@ -5,7 +5,6 @@ import java.util.Calendar;
 import java.util.Date;
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +21,6 @@ import android.widget.TimePicker;
 import android.widget.Toast;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.util.CountingTime;
@@ -63,14 +61,6 @@ public class AllocationAdapter extends BaseAdapter {
 		return allocations.get(position).getId();
 	}
 	
-	public ArrayList<Allocation> getAllocations() {
-		return allocations;
-	}
-	
-	public void setAllocations(ArrayList<Allocation> allocations) {
-		this.allocations = allocations;
-	}
-	
 	static class AllocationHolder {
 		
 		LinearLayout linearLayoutEntryTime;
@@ -93,11 +83,7 @@ public class AllocationAdapter extends BaseAdapter {
 		
 		if(convertView == null) {
 			convertView = mInflater.inflate(layoutResourceId, parent, false);
-			
-			// Changing the font
-	 		Typeface typeFace = Typeface.createFromAsset(mContext.getAssets(),Font.FONT_RESOURCE_PATH);
-	 		Font.applyFonts(convertView, typeFace);
-			
+
 			allocationHolder = getRowLayout(convertView);
 			setRowEvents(allocationHolder);
 			
@@ -191,7 +177,7 @@ public class AllocationAdapter extends BaseAdapter {
 			public void onClick(View view) {
 				
 				Allocation allocation = (Allocation)view.getTag();
-				if(allocation.getEntryTime() == null && CountingTime.isToday(calendar.getTime()) == true) {
+				if(allocation.getEntryTime() == null && CountingTime.isToday(calendar.getTime())) {
 					insertEntryTime(allocation);
 				}
 				else {
@@ -212,7 +198,7 @@ public class AllocationAdapter extends BaseAdapter {
 					return;
 				}
 				
-				if(allocation.getExitTime() == null && CountingTime.isToday(calendar.getTime()) == true) {
+				if(allocation.getExitTime() == null && CountingTime.isToday(calendar.getTime())) {
 					insertExitTime(allocation);
 				}
 				else {
@@ -436,9 +422,7 @@ public class AllocationAdapter extends BaseAdapter {
 	}
 	
 	public boolean isEmptyCheckPoint(Allocation allocation) {
-		if(allocation.getId() == -1)
-			return true;
-		return false;
+        return (allocation.getId() == -1);
 	}
 	
 	public void addEmptyAllocationIfNecessary() {
@@ -448,7 +432,7 @@ public class AllocationAdapter extends BaseAdapter {
 	
 	public void insertEntryTime(Allocation allocation) {
 		
-		if(allocation.getEntryTime() == null && CountingTime.isToday(calendar.getTime()) == true) {
+		if(allocation.getEntryTime() == null && CountingTime.isToday(calendar.getTime())) {
 			calendar.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
 			calendar.set(Calendar.MINUTE, Calendar.getInstance().get(Calendar.MINUTE));
 		}
@@ -469,7 +453,7 @@ public class AllocationAdapter extends BaseAdapter {
 	
 	public void insertExitTime(Allocation allocation) {
 		
-		if(allocation.getExitTime() == null && CountingTime.isToday(calendar.getTime()) == true) {
+		if(allocation.getExitTime() == null && CountingTime.isToday(calendar.getTime())) {
 			calendar.set(Calendar.HOUR_OF_DAY, Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
 			calendar.set(Calendar.MINUTE, Calendar.getInstance().get(Calendar.MINUTE));
 		}

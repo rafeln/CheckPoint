@@ -9,8 +9,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
-import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +25,6 @@ import android.widget.TextView;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.adapter.AllocationAdapter;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.preference.Preference;
@@ -68,7 +67,7 @@ public class MainActivity extends Activity {
 		
 		super.onResume();
 		
-		if(Preference.getAlarmState(this) == true)
+		if(Preference.getAlarmState(this))
 			imageViewAlarm.setImageResource(R.drawable.ic_alarm_on);
 		else
 			imageViewAlarm.setImageResource(R.drawable.ic_alarm_off);
@@ -104,12 +103,8 @@ public class MainActivity extends Activity {
         textViewTotal = (TextView)findViewById(R.id.mainTextViewTotal);
         
         addFooter();
-        
-        // Changing the font
- 		Typeface typeFace = Typeface.createFromAsset(getAssets(),Font.FONT_RESOURCE_PATH);
- 		Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
-        
-        if(AlarmIntentService.isMyServiceRunning(this) == false) {
+
+        if(!AlarmIntentService.isMyServiceRunning(this)) {
 	        startAlarmService();
         }
         startBroadcastReceiver();
@@ -151,7 +146,7 @@ public class MainActivity extends Activity {
         public void onReceive(Context context, Intent intent) {
         	
         	// if not today, do not calculate the lack, total and time to go
-        	if(CountingTime.isToday(showingDate) == false)
+        	if(!CountingTime.isToday(showingDate))
         		return;
         	
         	instantTotal = intent.getStringExtra(AlarmIntentService.TOTAL);
@@ -294,7 +289,7 @@ public class MainActivity extends Activity {
     }
     
     @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
+    public boolean onKeyDown(int keyCode, @NonNull KeyEvent event) {
     	
     	if (keyCode == KeyEvent.KEYCODE_MENU) {
     		goToConfiguration(null);

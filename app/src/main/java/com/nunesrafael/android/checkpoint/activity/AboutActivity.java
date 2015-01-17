@@ -2,12 +2,10 @@ package com.nunesrafael.android.checkpoint.activity;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import com.nunesrafael.android.checkpoint.R;
-import com.nunesrafael.android.checkpoint.font.Font;
 
 public class AboutActivity extends Activity {
 	
@@ -20,10 +18,6 @@ public class AboutActivity extends Activity {
 	    	
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_about);
-		
-		// Changing the font
-		Typeface typeFace = Typeface.createFromAsset(getAssets(), Font.FONT_RESOURCE_PATH);
-		Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
 	}
 	
 	public void back(View view) {

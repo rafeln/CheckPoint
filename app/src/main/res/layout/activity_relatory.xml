@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,7 +12,7 @@
         android:layout_height="@dimen/checkpoint_height"
         android:background="@color/bg_green" >
         
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -19,7 +20,8 @@
             android:contentDescription="@string/back"
             android:background="@drawable/selector_back"
             android:layout_marginLeft="@dimen/margin_text"
-            android:onClick="back" />
+            android:onClick="back"
+            custom:fontNameImageButtonPlus="roboto"/>
         
          <ImageView
             android:layout_width="wrap_content"
@@ -29,7 +31,7 @@
             android:contentDescription="@string/app_name"
             android:src="@drawable/checkpoint_title" />
          
-        <ImageButton
+        <com.nunesrafael.android.checkpoint.widget.ImageButtonPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -37,16 +39,18 @@
             android:contentDescription="@string/new_relatory"
             android:background="@drawable/selector_plus"
             android:layout_marginRight="@dimen/margin_text"
-            android:onClick="showPopups" />
+            android:onClick="showPopups"
+            custom:fontNameImageButtonPlus="roboto" />
     </RelativeLayout>
 
-    <TextView
+    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
         android:layout_width="match_parent"
         android:layout_height="@dimen/screen_title"
         android:gravity="center"
         android:text="@string/relatory"
         android:textColor="@color/text_gray_header"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        custom:fontNameTextViewPlus="roboto" />
     
     <!-- Border -->
     <LinearLayout
@@ -66,14 +70,15 @@
 	        android:layout_height="match_parent"
 	        android:divider="@color/white" />
 
-	    <TextView
+	    <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 	        android:id="@+id/relatoryTextViewNewRelatoryHint"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
 	        android:text="@string/new_relatory_hint"
-	        android:textColor="@color/text_green" />
+	        android:textColor="@color/text_green"
+            custom:fontNameTextViewPlus="roboto" />
     
     </RelativeLayout>
     

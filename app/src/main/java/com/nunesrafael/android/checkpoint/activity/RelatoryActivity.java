@@ -6,7 +6,6 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +18,6 @@ import android.widget.Toast;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.adapter.AllocationExpandableAdapter;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.util.CountingTime;
@@ -52,10 +50,6 @@ public class RelatoryActivity extends Activity {
         addHeader();
         
         textViewNewRelatoryHint = (TextView)findViewById(R.id.relatoryTextViewNewRelatoryHint);
-        
-        // Changing the font
-      	Typeface typeFace = Typeface.createFromAsset(getAssets(), Font.FONT_RESOURCE_PATH);
-      	Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
     	
     	expandableListView.post(new Runnable() {
     		public void run() {
@@ -86,7 +80,7 @@ public class RelatoryActivity extends Activity {
 		TextView textViewTitle = (TextView)popupWindowView.findViewById(R.id.popupDateTextViewTitle);
 		datePicker = (DatePicker)popupWindowView.findViewById(R.id.popupDateDatePicker);
 		
-		if(isEntry == true) {
+		if(isEntry) {
 			textViewTitle.setText(getString(R.string.relatory_init));
 			datePicker.init(calendarInit.get(Calendar.YEAR), calendarInit.get(Calendar.MONTH), calendarInit.get(Calendar.DATE), null);
 		}
@@ -105,7 +99,7 @@ public class RelatoryActivity extends Activity {
 				int month = datePicker.getMonth();
 				int dayOfMonth = datePicker.getDayOfMonth();
 				
-				if(isEntry == true) {
+				if(isEntry) {
 					calendarInit.set(year, month, dayOfMonth);
 					isEntry = false;
 					Popup.removePopup();

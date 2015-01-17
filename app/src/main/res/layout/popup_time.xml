@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,7 +16,7 @@
 	    android:padding="@dimen/popup_intern_padding">
 	    
         <!-- Title -->
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupTimeTextViewTitle"
             android:layout_width="match_parent"
             android:layout_height="@dimen/popup_title_height"
@@ -25,7 +26,8 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:gravity="center_vertical"
             android:paddingLeft="@dimen/margin_text"
-            android:layout_marginBottom="@dimen/popup_intern_padding" />
+            android:layout_marginBottom="@dimen/popup_intern_padding"
+            custom:fontNameTextViewPlus="roboto" />
         
         <LinearLayout
             android:orientation="vertical"
@@ -40,21 +42,23 @@
 		    	android:layout_height="wrap_content"
 		    	android:background="@color/bg_gray_content"
 		    	android:layout_marginTop="@dimen/margin_default">
-		    	<TextView
+		    	<com.nunesrafael.android.checkpoint.widget.TextViewPlus
 		    	    android:id="@+id/popupTimeTextViewTimeText"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:text="@string/entry_time"
 		            android:textColor="@color/text_gray"
 		            android:layout_marginLeft="@dimen/margin_text"
-		            android:layout_marginRight="@dimen/margin_text" />
+		            android:layout_marginRight="@dimen/margin_text"
+                    custom:fontNameTextViewPlus="roboto" />
 		    	
-		        <TextView
+		        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 		            android:id="@+id/popupTimeTextViewCheckPointTime"
 		            android:layout_width="match_parent"
 		            android:layout_height="wrap_content"
 		            android:text="@string/hour"
-		            android:textColor="@color/text_green" />
+		            android:textColor="@color/text_green"
+                    custom:fontNameTextViewPlus="roboto" />
 	        </LinearLayout>
         
 	        <TimePicker
@@ -71,22 +75,24 @@
 		    android:layout_height="wrap_content"
 		    android:gravity="center">
 	        
-	        <Button
+	        <com.nunesrafael.android.checkpoint.widget.ButtonPlus
 	            android:id="@+id/popupTimeButtonCancel"
 	            android:layout_width="@dimen/popup_button_width"
 	            android:layout_height="@dimen/popup_button_height"
 	            android:text="@string/cancel"
 	            android:textColor="@color/white"
 	            android:background="@drawable/selector_green_button"
-	            android:layout_marginRight="@dimen/margin_text" />
+	            android:layout_marginRight="@dimen/margin_text"
+                custom:fontNameButtonPlus="roboto" />
 	        
-	        <Button
+	        <com.nunesrafael.android.checkpoint.widget.ButtonPlus
 	            android:id="@+id/popupTimeButtonOk"
 	            android:layout_width="@dimen/popup_button_width"
 	            android:layout_height="@dimen/popup_button_height"
 	            android:text="@string/ok"
 	            android:textColor="@color/white"
-	            android:background="@drawable/selector_green_button" />
+	            android:background="@drawable/selector_green_button"
+                custom:fontNameButtonPlus="roboto" />
 	        
         </LinearLayout>
 	</LinearLayout>

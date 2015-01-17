@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
@@ -18,26 +19,29 @@
 	    android:gravity="center_vertical"
 	    android:background="@color/bg_gray_header">
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/balance"
             android:textColor="@color/text_gray"
             android:layout_marginLeft="@dimen/margin_default"
-	        android:layout_marginRight="@dimen/margin_text" />
+	        android:layout_marginRight="@dimen/margin_text"
+            custom:fontNameTextViewPlus="roboto" />
 	
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/listViewFooterTextViewBalanceTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/hour"
             android:textColor="@color/text_green"
-            android:layout_marginRight="@dimen/margin_default" />
+            android:layout_marginRight="@dimen/margin_default"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            custom:fontNameTextViewPlus="roboto" />
         
 	    
         <!-- Alarm and exit Time -->
@@ -59,20 +63,22 @@
 	            android:contentDescription="@string/alarm"
 	            android:src="@drawable/selector_alarm" />
 	
-	        <TextView
+	        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:textColor="@color/text_gray"
 	            android:layout_marginLeft="@dimen/margin_text"
-	            android:text="@string/exit_time" />
+	            android:text="@string/exit_time"
+                custom:fontNameTextViewPlus="roboto" />
 	        
-	        <TextView
+	        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
 	            android:id="@+id/listViewFooterTextViewTimeToGo"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_marginLeft="@dimen/margin_text"
 	            android:text="@string/hour"
-	            android:textColor="@color/text_green" />
+	            android:textColor="@color/text_green"
+                custom:fontNameTextViewPlus="roboto" />
 	    </LinearLayout>
         
 	</LinearLayout>

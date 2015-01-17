@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -15,7 +16,7 @@
 	    android:padding="@dimen/popup_intern_padding">
 	    
         <!-- Title -->
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="match_parent"
             android:layout_height="@dimen/popup_title_height"
             android:text="@string/choose_option"
@@ -23,9 +24,10 @@
             android:background="@color/bg_green"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:gravity="center"
-            android:layout_marginBottom="@dimen/popup_intern_padding" />
+            android:layout_marginBottom="@dimen/popup_intern_padding"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupOptionsTextViewEditEntryTime"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
@@ -33,9 +35,10 @@
             android:text="@string/edit_entry_time"
             android:textColor="@color/text_gray"
             android:background="@drawable/selector_listview_child"
-            android:layout_marginBottom="@dimen/border_height" />
+            android:layout_marginBottom="@dimen/border_height"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupOptionsTextViewEditExitTime"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
@@ -43,9 +46,10 @@
             android:text="@string/edit_exit_time"
             android:textColor="@color/text_gray"
             android:background="@drawable/selector_listview_child"
-            android:layout_marginBottom="@dimen/border_height" />
+            android:layout_marginBottom="@dimen/border_height"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupOptionsTextViewEditComment"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
@@ -53,9 +57,10 @@
             android:text="@string/edit_comment"
             android:textColor="@color/text_gray"
             android:background="@drawable/selector_listview_child"
-            android:layout_marginBottom="@dimen/border_height" />
+            android:layout_marginBottom="@dimen/border_height"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupOptionsTextViewDelete"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
@@ -63,9 +68,10 @@
             android:text="@string/delete"
             android:textColor="@color/text_gray"
             android:background="@drawable/selector_listview_child"
-            android:layout_marginBottom="@dimen/border_height" />
+            android:layout_marginBottom="@dimen/border_height"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/popupOptionsTextViewRemoveFromListView"
             android:layout_width="match_parent"
             android:layout_height="@dimen/row_height"
@@ -73,16 +79,18 @@
             android:text="@string/remove_from_listview"
             android:textColor="@color/text_gray"
             android:background="@drawable/selector_listview_child"
-            android:layout_marginBottom="@dimen/border_height" />
+            android:layout_marginBottom="@dimen/border_height"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <Button
+        <com.nunesrafael.android.checkpoint.widget.ButtonPlus
             android:id="@+id/popupOptionsButtonCancel"
             android:layout_width="@dimen/popup_button_width"
             android:layout_height="@dimen/popup_button_height"
             android:text="@string/cancel"
             android:textColor="@color/white"
             android:layout_gravity="center"
-            android:background="@drawable/selector_green_button" />
+            android:background="@drawable/selector_green_button"
+            custom:fontNameButtonPlus="roboto" />
         
 	</LinearLayout>
 </LinearLayout>

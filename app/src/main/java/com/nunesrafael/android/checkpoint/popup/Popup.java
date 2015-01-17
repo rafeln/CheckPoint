@@ -1,14 +1,12 @@
 package com.nunesrafael.android.checkpoint.popup;
 
 import android.content.Context;
-import android.graphics.Typeface;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.PopupWindow;
 import com.nunesrafael.android.checkpoint.R;
-import com.nunesrafael.android.checkpoint.font.Font;
 
 public class Popup {
 	
@@ -26,11 +24,7 @@ public class Popup {
     	// Inflate the popup_layout.xml
 		LayoutInflater layoutInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View popupWindowView = layoutInflater.inflate(layoutResourceId, null);
-		
-		// Changing the font
-		Typeface typeFace = Typeface.createFromAsset(context.getAssets(),Font.FONT_RESOURCE_PATH);
-		Font.applyFonts(popupWindowView, typeFace);
-		
+
 		// Creating the PopupWindow
 		popupWindow = new PopupWindow(context);
 		popupWindow.setContentView(popupWindowView);

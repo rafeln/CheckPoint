@@ -5,7 +5,6 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -20,7 +19,6 @@ import android.widget.Toast;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.adapter.AllocationExpandableAdapter;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.util.CountingTime;
@@ -72,10 +70,6 @@ public class FindCommentActivity extends Activity {
 			    return false;
 			 }
 		});
-	    
-	    // Changing the font
-	    Typeface typeFace = Typeface.createFromAsset(getAssets(), Font.FONT_RESOURCE_PATH);
-	  	Font.applyFonts(getWindow().getDecorView().findViewById(android.R.id.content), typeFace);
 	 }
 	
 	 public void addHeader() {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -13,36 +14,40 @@
         android:gravity="center_vertical"
 	    android:layout_marginBottom="@dimen/border_height">
 
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/margin_text"
             android:text="@string/period"
-            android:textColor="@color/text_gray_header" />
+            android:textColor="@color/text_gray_header"
+            custom:fontNameTextViewPlus="roboto"/>
 
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/listViewHeaderTextViewInitDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_text"
             android:text="@string/hour"
-            android:textColor="@color/text_green" />
+            android:textColor="@color/text_green"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_text"
             android:text="@string/hifen"
-            android:textColor="@color/text_gray" />
+            android:textColor="@color/text_gray"
+            custom:fontNameTextViewPlus="roboto"/>
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/listViewHeaderTextViewEndDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_default"
             android:text="@string/hour"
-            android:textColor="@color/text_green" />
+            android:textColor="@color/text_green"
+            custom:fontNameTextViewPlus="roboto" />
         
     </LinearLayout>
     
@@ -55,21 +60,23 @@
         android:background="@color/bg_gray_content"
 	    android:layout_marginBottom="@dimen/border_height">
 
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/margin_text"
             android:text="@string/total"
-            android:textColor="@color/text_gray_header" />
+            android:textColor="@color/text_gray_header"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/listViewHeaderTextViewTotal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_default"
             android:text="@string/hour"
-            android:textColor="@color/text_green" />
+            android:textColor="@color/text_green"
+            custom:fontNameTextViewPlus="roboto" />
         
     </LinearLayout>
     
@@ -83,21 +90,23 @@
 	    android:layout_marginBottom="@dimen/border_height"
 	    android:visibility="gone">
 
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="@dimen/margin_text"
             android:text="@string/category"
-            android:textColor="@color/text_gray_header" />
+            android:textColor="@color/text_gray_header"
+            custom:fontNameTextViewPlus="roboto" />
         
-        <TextView
+        <com.nunesrafael.android.checkpoint.widget.TextViewPlus
             android:id="@+id/listViewHeaderTextViewCategory"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/margin_default"
             android:text="@string/category"
-            android:textColor="@color/text_green" />
+            android:textColor="@color/text_green"
+            custom:fontNameTextViewPlus="roboto" />
         
     </LinearLayout>
 </LinearLayout>

@@ -6,7 +6,6 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Context;
-import android.graphics.Typeface;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -21,7 +20,6 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import com.nunesrafael.android.checkpoint.R;
 import com.nunesrafael.android.checkpoint.datasource.Repository;
-import com.nunesrafael.android.checkpoint.font.Font;
 import com.nunesrafael.android.checkpoint.model.Allocation;
 import com.nunesrafael.android.checkpoint.popup.Popup;
 import com.nunesrafael.android.checkpoint.util.CountingTime;
@@ -78,15 +76,11 @@ public class AllocationExpandableAdapter extends BaseExpandableListAdapter{
 	@Override
 	public View getChildView(int groupPosition, int childPosition, boolean isLastChild, View convertView, ViewGroup parent) {
 		
-		AllocationChildHolder allocationChildHolder = new AllocationChildHolder();
+		AllocationChildHolder allocationChildHolder;
 		
 		if(convertView == null) {
 			convertView = mInflater.inflate(layoutChildResourceId, parent, false);
-			
-			// Changing the font
-	 		Typeface typeFace = Typeface.createFromAsset(mContext.getAssets(),Font.FONT_RESOURCE_PATH);
-	 		Font.applyFonts(convertView, typeFace);
-			
+
 			allocationChildHolder = getChildRowLayout(convertView);
 			
 			convertView.setTag(allocationChildHolder);
@@ -534,15 +528,11 @@ public class AllocationExpandableAdapter extends BaseExpandableListAdapter{
 	@Override
 	public View getGroupView(int groupPosition, boolean isExpanded,	View convertView, ViewGroup parent) {
 		
-		AllocationGroupHolder allocationGroupHolder = new AllocationGroupHolder();
+		AllocationGroupHolder allocationGroupHolder;
 		
 		if(convertView == null) {
 			convertView = mInflater.inflate(layoutGroupResourceId, parent, false);
-			
-			// Changing the font
-	 		Typeface typeFace = Typeface.createFromAsset(mContext.getAssets(),Font.FONT_RESOURCE_PATH);
-	 		Font.applyFonts(convertView, typeFace);
-			
+
 			allocationGroupHolder = getGroupRowLayout(convertView);
 			
 			convertView.setTag(allocationGroupHolder);
